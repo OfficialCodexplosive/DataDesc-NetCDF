@@ -1,0 +1,24 @@
+x-NetCDFStructure:
+  Dimensions:
+    location:
+      Dimensions:
+      - location
+      DataType: int64
+      Attributes: {}
+  Variables:
+    section_yearly_system_generation:
+      Dimensions:
+      - location
+      DataType: float64
+      Attributes: {}
+    section_capacity:
+      Coordinates:
+      - location
+      DataType: float64
+      Attributes: {}
+    section_modules_cost:
+      Coordinates:
+      - location
+      DataType: float64
+      Attributes:
+        Currency: EUR

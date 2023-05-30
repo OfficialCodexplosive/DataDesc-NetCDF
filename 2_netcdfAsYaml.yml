@@ -1,0 +1,112 @@
+components:
+  schemas:
+    NetCDF:
+      properties:
+        dimensions:
+          description: The dimensions of the NetCDF file.
+          properties:
+            lat:
+              properties:
+                size:
+                  description: The size of the lat dimension.
+                  example: 180
+                  type: integer
+              type: object
+            lon:
+              properties:
+                size:
+                  description: The size of the lon dimension.
+                  example: 360
+                  type: integer
+              type: object
+          type: object
+        format:
+          description: The format of the NetCDF file.
+          example: NETCDF4
+          type: string
+        variables:
+          description: The variables of the NetCDF file.
+          items:
+            properties:
+              Temperature:
+                properties:
+                  attributes:
+                    description: The attributes of the Temperature variable.
+                    properties:
+                      example:
+                        description: Surface temperature
+                        units: Celsius
+                    type: object
+                  data:
+                    description: The data of the Temperature variable.
+                    items: {}
+                    type: array
+                  dimensions:
+                    description: The dimensions of the Temperature variable.
+                    items:
+                      example:
+                      - lat
+                      - lon
+                      type: string
+                    type: array
+                  dtype:
+                    description: The data type of the Temperature variable.
+                    example: float32
+                    type: string
+                type: object
+              lat:
+                properties:
+                  attributes:
+                    description: The attributes of the lat variable.
+                    properties:
+                      example:
+                        long_name: latitude
+                        units: degrees_north
+                    type: object
+                  data:
+                    description: The data of the lat variable.
+                    items: {}
+                    type: array
+                  dimensions:
+                    description: The dimensions of the lat variable.
+                    items:
+                      example:
+                      - lat
+                      type: string
+                    type: array
+                  dtype:
+                    description: The data type of the lat variable.
+                    example: float32
+                    type: string
+                type: object
+              lon:
+                properties:
+                  attributes:
+                    description: The attributes of the lon variable.
+                    properties:
+                      example:
+                        long_name: longitude
+                        units: degrees_east
+                    type: object
+                  data:
+                    description: The data of the lon variable.
+                    items: {}
+                    type: array
+                  dimensions:
+                    description: The dimensions of the lon variable.
+                    items:
+                      example:
+                      - lon
+                      type: string
+                    type: array
+                  dtype:
+                    description: The data type of the lon variable.
+                    example: float32
+                    type: string
+                type: object
+          type: array
+      type: object
+info:
+  title: NetCDF File Schema
+  version: 1.0.0
+openapi: 3.0.0
