@@ -4,7 +4,7 @@ import os
 
 
 base_path = os.path.dirname(__file__)
-file_path = os.path.join(base_path, '../1_netcdf.nc')
+file_path = os.path.join(base_path, '../output/passion.nc')
 
 # Open the NetCDF file
 nc_file = nc.Dataset(file_path, 'r')

@@ -5,18 +5,11 @@ components:
         dimensions:
           description: The dimensions of the NetCDF file.
           properties:
-            lat:
+            location:
               properties:
                 size:
-                  description: The size of the lat dimension.
-                  example: 180
-                  type: integer
-              type: object
-            lon:
-              properties:
-                size:
-                  description: The size of the lon dimension.
-                  example: 360
+                  description: The size of the location dimension.
+                  example: 0
                   type: integer
               type: object
           type: object
@@ -28,80 +21,78 @@ components:
           description: The variables of the NetCDF file.
           items:
             properties:
-              Temperature:
+              section_capacity:
                 properties:
                   attributes:
-                    description: The attributes of the Temperature variable.
+                    description: The attributes of the section_capacity variable.
                     properties:
-                      example:
-                        description: Surface temperature
-                        units: Celsius
+                      example: {}
                     type: object
                   data:
-                    description: The data of the Temperature variable.
+                    description: The data of the section_capacity variable.
                     items: {}
                     type: array
                   dimensions:
-                    description: The dimensions of the Temperature variable.
+                    description: The dimensions of the section_capacity variable.
                     items:
                       example:
-                      - lat
-                      - lon
+                      - location
                       type: string
                     type: array
                   dtype:
-                    description: The data type of the Temperature variable.
-                    example: float32
+                    description: The data type of the section_capacity variable.
+                    example: float64
                     type: string
                 type: object
-              lat:
+              section_modules_cost:
                 properties:
                   attributes:
-                    description: The attributes of the lat variable.
+                    description: The attributes of the section_modules_cost variable.
                     properties:
                       example:
-                        long_name: latitude
-                        units: degrees_north
+                        Currency: EUR
                     type: object
                   data:
-                    description: The data of the lat variable.
+                    description: The data of the section_modules_cost variable.
                     items: {}
                     type: array
                   dimensions:
-                    description: The dimensions of the lat variable.
+                    description: The dimensions of the section_modules_cost variable.
                     items:
                       example:
-                      - lat
+                      - location
                       type: string
                     type: array
                   dtype:
-                    description: The data type of the lat variable.
-                    example: float32
+                    description: The data type of the section_modules_cost variable.
+                    example: float64
                     type: string
                 type: object
-              lon:
+              section_yearly_system_generation:
                 properties:
                   attributes:
-                    description: The attributes of the lon variable.
+                    description: The attributes of the section_yearly_system_generation
+                      variable.
                     properties:
-                      example:
-                        long_name: longitude
-                        units: degrees_east
+                      example: {}
                     type: object
                   data:
-                    description: The data of the lon variable.
+                    description: The data of the section_yearly_system_generation
+                      variable.
                     items: {}
                     type: array
                   dimensions:
-                    description: The dimensions of the lon variable.
+                    description: The dimensions of the section_yearly_system_generation
+                      variable.
                     items:
                       example:
-                      - lon
+                      - location
                       type: string
                     type: array
                   dtype:
-                    description: The data type of the lon variable.
-                    example: float32
+                    description: The data type of the section_yearly_system_generation
+                      variable.
+                    example: float64
                     type: string
                 type: object
           type: array

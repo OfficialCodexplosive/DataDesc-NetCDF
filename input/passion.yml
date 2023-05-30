@@ -54,12 +54,12 @@ components:
                 DataType: float64
                 Attributes: {}
               section_capacity:
-                Coordinates:
+                Dimensions:
                 - location
                 DataType: float64
                 Attributes: {}
               section_modules_cost:
-                Coordinates:
+                Dimensions:
                 - location
                 DataType: float64
                 Attributes:
